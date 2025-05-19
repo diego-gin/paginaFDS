@@ -112,7 +112,7 @@ nav img{
         padding-top: 1.5rem;
     }
 
-    .nav-right a{
+    .nav-right a {
         font-size: clamp(1.5rem, 0.67vw + 1.286rem, 1.8rem);
         text-wrap: nowrap;
     }
@@ -150,7 +150,7 @@ nav img{
 }
 
 @media (max-width: 768px) {
-    .hero-section{
+    .hero-section {
         flex-direction: column-reverse;
         text-align: center;
         padding: 2rem 5%;
@@ -190,7 +190,7 @@ nav img{
     border-color: var(--text-color);
 }
 
-/* TABLE */
+/* TABELA */
 .table-section {
     display: flex;  
     flex-direction: column;
@@ -256,6 +256,7 @@ nav img{
     }
 }
 
+/* PROJETO */
 .project-section {
     display: flex;
     flex-direction: column;
