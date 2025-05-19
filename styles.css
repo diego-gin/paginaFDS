@@ -8,8 +8,8 @@
     /* FONTS */
     --body: clamp(1.6rem, 0.306vw + 1.539rem, 1.8rem);
     --h1: clamp(3rem, 2.753vw + 2.449rem, 4.8rem);
-    --h2: clamp(2.8rem, 0.612vw + 2.678rem, 3.2rem);
-    --h3: clamp(2rem, 0.306vw + 1.939rem, 2.2rem);
+    --h2: clamp(2.5rem, 0.669vw + 2.286rem, 3.2rem);
+    --h3: clamp(1.8rem, 0.382vw + 1.678rem, 2.2rem);
 }
 
 html {
@@ -33,7 +33,7 @@ h1, h2 {
 }
 
 body {
-    background-image: linear-gradient(rgba(255, 0, 0, 0.8), rgba(0, 0, 255, 0.8)),
+    background-image: linear-gradient(hsla(0, 100%, 50%, 0.8), rgba(0, 0, 255, 0.8)),
         url('./img/bg.png');
     background-position: center;
     background-size: 100%;
@@ -43,6 +43,12 @@ body {
     font-size: var(--body);
     color: var(--text-color);
     letter-spacing: 0.1rem;
+}
+
+@media (max-width: 768px) {
+    body{
+        background-image: none;
+    }
 }
 
 .wrapper {
@@ -69,7 +75,7 @@ nav {
 .nav-left h3 {
     font-size: var(--h3);
     font-family: "Consolas";
-    font-weight: lighter;
+    font-weight: 500;
     color: seagreen;
 }
 
@@ -77,6 +83,7 @@ nav {
     color: var(--text-color);
     font-weight: bold;
     margin-inline: 1rem;
+    text-wrap: nowrap;
 }
 
 .nav-right a:hover {
@@ -104,6 +111,11 @@ nav img{
         justify-content: space-evenly;
         padding-top: 1.5rem;
     }
+
+    .nav-right a{
+        font-size: clamp(1.5rem, 0.67vw + 1.286rem, 1.8rem);
+        text-wrap: nowrap;
+    }
 }
 
 /* HERO */
@@ -122,6 +134,7 @@ nav img{
 
 .hero-info h1 {
     margin-bottom: -2rem;
+    text-wrap: nowrap;
 }
 
 .hero-info h2 {
@@ -139,7 +152,8 @@ nav img{
 @media (max-width: 768px) {
     .hero-section{
         flex-direction: column-reverse;
-        text-align: center; 
+        text-align: center;
+        padding: 2rem 5%;
         gap: 2rem;   
     }
 
@@ -180,7 +194,7 @@ nav img{
 .table-section {
     display: flex;  
     flex-direction: column;
-    background-color: rgb(186, 137, 232);
+    background-color: #ba89e8;
     padding: 8rem 5%;
 }
 
@@ -204,7 +218,7 @@ nav img{
 }
 
 .tbl thead {
-    background: grey;
+    background: #8e8e8e;
 }
 
 .tbl thead tr th {
@@ -237,6 +251,9 @@ nav img{
         font-weight: 700;
         text-transform: capitalize;
     }
+    .table-section {
+        padding: 4rem 5%;
+    }
 }
 
 .project-section {
@@ -248,11 +265,17 @@ nav img{
     gap: 2rem;
 }
 
+@media (max-width: 768px) {
+    .project-section {
+    padding: 4rem 5%;
+    }
+}
+
 footer {
     display: flex;
     flex-direction: column;
-    background-color: lightseagreen;
     text-align: center;
     justify-content: center;
-    height: 100px;
+    background-color: #92affd;
+    padding: 2rem 5%;
 }
